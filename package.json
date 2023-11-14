@@ -1,6 +1,6 @@
 {
   "name": "zshmeact",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "description": "A Vite+React Starter Now",
   "main": "zshmeact.mjs",
   "scripts": {
