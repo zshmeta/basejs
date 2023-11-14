@@ -1,0 +1,37 @@
+{
+  "name": "zshmeact",
+  "version": "1.2.4",
+  "description": "A Vite+React Starter Now",
+  "main": "zshmeact.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "zshmeact": "node -e 'require(\"./index.js\").zshmeact();'"
+  },
+  "bin": {
+    "zshmeact": "./zshmeact.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zshmeta/zshmeact.git"
+  },
+  "keywords": [
+    "Template",
+    "Vite",
+    "React"
+  ],
+  "author": "zshmeta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zshmeta/zshmeact/issues"
+  },
+  "homepage": "https://github.com/zshmeta/zshmeact#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "fs-extra": "^11.1.1",
+    "inquirer": "^9.2.6"
+  },
+  "devDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

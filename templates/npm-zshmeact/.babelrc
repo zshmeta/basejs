@@ -1,0 +1,29 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+// Browser restrictions
+        "targets": "> 0.25%, not dead"
+      }
+    ],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+// To use Class properties
+    "@babel/plugin-proposal-class-properties",
+// To use async/await
+    "@babel/plugin-transform-runtime",
+// to make imports easier 
+    "babel-plugin-root-import",
+  ["module-resolver", {
+    "root": ["./"],
+    "alias": {
+      "components": "./components",
+      "containers": "./containers",
+      "queries": "./graphql/queries"
+    }
+  }]
+]
+  
+}
