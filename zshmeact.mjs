@@ -29,11 +29,6 @@ const QUESTIONS = [
 ];
 
 
-inquirer.prompt(QUESTIONS)
-  .then(answers => {
-    console.log(answers);
-});
-
 const CURR_DIR = process.cwd();
 
 inquirer.prompt(QUESTIONS)
