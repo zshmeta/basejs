@@ -33,6 +33,7 @@ const CURR_DIR = process.cwd();
 
 inquirer.prompt(QUESTIONS)
   .then(answers => {
+  console.log(answers);
     const projectChoice = answers['project-choice'];
     const projectName = answers['project-name'];
     const templatePath = `${__dirname}/templates/${projectChoice}`;
