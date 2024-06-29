@@ -2,6 +2,7 @@
 
 import inquirer from 'inquirer';
 import fs from 'fs'
+import { execSync } from 'child_process';
 
 //define __dirname for es6 modules
 
@@ -31,17 +32,6 @@ const QUESTIONS = [
 
 const CURR_DIR = process.cwd();
 
-inquirer.prompt(QUESTIONS)
-  .then(answers => {
-  console.log(answers);
-    const projectChoice = answers['project-choice'];
-    const projectName = answers['project-name'];
-    const templatePath = `${__dirname}/templates/${projectChoice}`;
-  
-    fs.mkdirSync(`${CURR_DIR}/${projectName}`);
-    createDirectoryContents(templatePath, projectName);
-    execSync(`cd ${projectPath} && npm init -y`, { stdio: "inherit" });
-  });
 
 
 function createDirectoryContents (templatePath, newProjectPath) {
@@ -85,3 +75,21 @@ function createDirectoryContents (templatePath, newProjectPath) {
     );
   }
   
+const zshmeact = () => {
+
+
+inquirer.prompt(QUESTIONS)
+.then(answers => {
+console.log(answers);
+  const projectChoice = answers['project-choice'];
+  const projectName = answers['project-name'];
+  const templatePath = `${__dirname}/templates/${projectChoice}`;
+
+  fs.mkdirSync(`${CURR_DIR}/${projectName}`);
+  createDirectoryContents(templatePath, projectName);
+  execSync(`cd ${projectPath} && npm init -y`, { stdio: "inherit" });
+});
+
+};
+
+export default zshmeact;  

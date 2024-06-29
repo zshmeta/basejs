@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
-const zshmeact = require('zshmeact')
+import zshmeact from './zshmeact.mjs'
+
 
 zshmeact()
