@@ -1,11 +1,37 @@
 {
-  "name": "starter",
-  "module": "index.ts",
+  "name": "basejs",
+  "version": "1.0.0",
+  "description": "A comprehensive JavaScript library",
+  "main": "index.js",
   "type": "module",
-  "devDependencies": {
-    "@types/bun": "latest"
+  "author": "zshmeta",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zshmeta/basejs.git"
   },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  }
+  "keywords": [
+    "javascript",
+    "library",
+    "basejs",
+    "template generator"
+  ],
+  "dependencies": {
+    "inquirer": "^9.3.1",
+    "ejs": "^3.1.6"
+  },
+  "devDependencies": {
+    "mocha": "^9.1.1",
+    "chai": "^4.3.4"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/zshmeta/basejs/issues"
+  },
+  "homepage": "https://github.com/zshmeta/basejs#readme"
 }

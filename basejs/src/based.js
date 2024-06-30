@@ -1,18 +1,26 @@
 #!/usr/bin/env node
 
-import inquirer, { QuestionCollection } from "inquirer";
+import inquirer from "inquirer";
 import fs from "fs";
 import { execSync } from "child_process";
 import path from "path";
 
-// Error handling function with type annotation for the error parameter
-const handleErrors = (err: unknown): void => {
+/**
+ * Error handling function.
+ * @param {Error} err - The error object.
+ */
+const handleErrors = (err) => {
   console.error("\x1b[31m", "Error:", err);
   process.exit(1);
 };
 
-// Function to copy the template files to the new project directory
-const createDirectoryContents = (templatePath: string, projectPath: string, projectName: string): void => {
+/**
+ * Function to copy the template files to the new project directory.
+ * @param {string} templatePath - The path to the template directory.
+ * @param {string} projectPath - The path to the new project directory.
+ * @param {string} projectName - The name of the new project.
+ */
+const createDirectoryContents = (templatePath, projectPath, projectName) => {
   const filesToCreate = fs.readdirSync(templatePath);
 
   filesToCreate.forEach((file) => {
@@ -34,7 +42,9 @@ const createDirectoryContents = (templatePath: string, projectPath: string, proj
   });
 };
 
-// main generation function 
+/**
+ * Main generation function.
+ */
 async function basedjs() {
   try {
     console.log("\x1b[36m%s\x1b[0m", "🚀✍️ BaseJS! ✨");
@@ -47,7 +57,7 @@ async function basedjs() {
     const CHOICES = fs.readdirSync(path.join(__dirname, 'bases'));
 
     // Define questions for CLI prompts
-    const BASENAME: QuestionCollection = [
+    const BASENAME = [
       {
         name: 'project-name',
         type: 'input',
